@@ -1,0 +1,38 @@
+<html>
+<head><title>Hello World</title>
+<script src = "https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+<script src = emp.js></script>
+</head>
+
+<body ng-app ="empApp">
+
+<div ng-controller ="empCtrl">
+<h3> ===== Employee List ===== </h3>
+
+Enter a key <input ng-model = "x">
+
+<!-- Enter a key <input ng-model = "x.name"> -->
+
+<!-- <h2 ng-repeat = "x in employees | orderBy : 'company + name'"> {{x.name}} works at {{x.company}} </h2> -->
+<!-- case insensitive filtering -->
+
+<h2 ng-repeat = "x in employees | filter : x"> {{x.name}} works at {{x.company}} </h2>
+
+
+=======================================================================================================
+
+<table border="2">
+<tr ng-repeat = "x in employees | orderBy : company"> 
+<td>{{x.name}}</td><td> {{x.company}}</td>
+</tr>
+</table>
+
+
+
+
+</div>
+</div>
+
+
+</body>
+</html>

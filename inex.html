@@ -1,0 +1,69 @@
+<html>
+<head><title>Hello World</title>
+<script src = "https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+<script src = app.js></script>
+</head>
+
+<body ng-app ="myApp" ng-init = "company = 'oracle'; "> 
+<div ng-controller = "HelloController" >
+<div ng-init="firstName='John'">
+
+<p>The name is <span ng-bind="firstName" ></span></p>
+</div>
+
+Enter name : <input ng-model="name">
+Welcome {{name}}! {{6+9-8}}
+
+  <p>Place: <input type="text" ng-model="place"></p>
+  
+  From {{place}}
+  <p ng-bind="place"></p>
+
+<h1> Hello.. {{message}}<br/> </h1>
+
+
+<ol>
+    <li ng-repeat="x in names">{{x | uppercase}}</li>
+</ol>
+
+<h2 ng-if="company == 'UST'"> Yes this is it</h1>
+
+<h2 ng-if="company != 'UST'"> Not this is not</h1>
+
+
+<div ng-init = "name ='Jim' ; score = '48' ; grade='A'; n1 ='3' ; details =[{name : 'Ren', place : 'US'},{name : 'Kate', place :'Paris'},{name:'Nitu', place : 'India'},{name : 'Kevin', place :'Korea'}]">
+
+<h2 ng-if=" grade == 'A' && score > '40'"> {{name}},  Excellent </h2>
+<h2 ng-if="grade == 'B' && score < '40' "> {{name}},  Try More </h2>
+<h2 ng-if="grade == 'C' && score < '30'"> {{name}},  Work Hard </h2>
+salary is {{salary | currency}}
+
+<pre>
+                                                                                   India is my Country 
+										  ======================
+							    	 All Indians are my brothers and sisters
+</pre>
+<h3 style ="color : green" ng-repeat = "x in details">{{x.name}} lives in {{x.place}}
+</h3></div>
+<h1>{{print()}}</h1>
+
+<!-- <button ng-click = "count = count+1" ng-init ="count = 0">Click here : </button> <br/>{{count}} -->
+<button ng-click="myFunc()">OK</button>
+  <p>The button has been clicked {{count}} times.</p>
+</div>
+
+<div ng-controller ="ctrl1">
+
+<div ng-controller ="ctrl2">
+
+<h3 style = "color : blue"> Today is {{today | date}}</h3>
+<h3 style = "color : maroon"> Today is {{today | date :'longDate'}}</h3>
+<h3 style = "color : darkorange"> Today is {{today | date :'mediumDate'}}</h3>
+<h3 style = "color : red"> Today is {{today | date : 'shortDate'}}</h3>
+<h3 style = "color : darkcyan"> Today is {{today | date : 'dd/MM/yyyy'}}</h3>
+
+</div>
+
+</div>
+</body>
+</html>
