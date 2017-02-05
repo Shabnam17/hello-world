@@ -1,0 +1,22 @@
+<html>
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+        <script src="trial.js"></script>
+</head>
+<body ng-app ="someApp" ng-controller="SomeController">
+<h3> The heading below changes after 5 seconds </h3>
+
+<h2 style = "color:red"> {{myHeading}} </h2>
+<h3>{{parameter}}</h3>
+
+<h2 style = "color:green"> I reside at {{myLocation}}</h2>
+
+<br/>
+
+<input ng-model="mydata.val">
+<h3 style="color : brown" > {{mydata.val}}</h3>
+
+<span ng-show="mydata.toolong"> Name is too long! </span>
+
+</body>
+</html>
