@@ -1,7 +1,8 @@
+
 <html>
 <head>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
-        <script src="trial.js"></script>
+    <script src="trial.js"></script>
 </head>
 <body ng-app ="someApp" ng-controller="SomeController">
 <h3> The heading below changes after 5 seconds </h3>
@@ -17,6 +18,15 @@
 <h3 style="color : brown" > {{mydata.val}}</h3>
 
 <span ng-show="mydata.toolong"> Name is too long! </span>
+
+<h2> {{resName}}</h2>
+
+<table border ="2"> 
+<tr ng-repeat = "details in x | orderBy: 'id'">
+<td>{{details.id}}</td><td> {{details.name}}</td></tr>
+<td> </td>
+</tr>
+</table>
 
 </body>
 </html>
